@@ -1,10 +1,10 @@
 /*
- * LorganiCore — the "Core View": heterogeneous information streams into a
+ * LorganiCore - the "Core View": heterogeneous information streams into a
  * living, node-built intelligence centre and resolves into organized outcomes.
  * Mount: <div data-liorta-visual="core" data-mode="hero|intro|evidence">
- *   hero     — no platform/application names; generic inputs → outcomes
- *   intro    — platform name + capabilities (the same core, more explanation)
- *   evidence — the application demonstration: eight evidence types → branded
+ *   hero     - no platform/application names; generic inputs → outcomes
+ *   intro    - platform name + capabilities (the same core, more explanation)
+ *   evidence - the application demonstration: eight evidence types → branded
  *              capabilities → human review & approval → dossier UI
  * Labels come from LIORTA_BRAND; capabilities are shown together, never as a sequence.
  */
@@ -359,7 +359,7 @@
         V.glyph(ctx, o.type, p.x, p.y, size, a, true);
       });
 
-      // protection halo — the same teal signature in every view
+      // protection halo - the same teal signature in every view
       ctx.strokeStyle = V.rgba("teal", 0.3);
       ctx.lineWidth = 1;
       ctx.beginPath();

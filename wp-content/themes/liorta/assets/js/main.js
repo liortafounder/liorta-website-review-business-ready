@@ -127,7 +127,7 @@
 
   // ---- Contact: reason pills switch between the general and partnership
   // field sets; CTA links pre-select the reason and record their source.
-  // Presentation only — routing is decided server-side. ----
+  // Presentation only - routing is decided server-side. ----
   var cform = document.querySelector("[data-liorta-contact-form]");
   if (cform) {
     var CONTEXT = ["platform", "demo", "solutions"];

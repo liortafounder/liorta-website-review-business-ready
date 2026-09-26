@@ -1,5 +1,5 @@
 /*
- * Liorta visual system — shared grammar for the Living Mark and the three
+ * Liorta visual system - shared grammar for the Living Mark and the three
  * Lorgani views (Core, Fabric, Orbit). Components register with
  * LiortaVisuals.register(name, init) and mount on [data-liorta-visual="name"].
  * All names/labels come from window.LIORTA_BRAND (Brand Configuration); this
@@ -250,7 +250,7 @@
     ctx.closePath();
   };
 
-  // Soft radial glow — the only glow style in the system.
+  // Soft radial glow - the only glow style in the system.
   V.glow = function (ctx, x, y, r, a, color) {
     if (a <= 0.005) return;
     var g = ctx.createRadialGradient(x, y, 0, x, y, r);
@@ -459,7 +459,7 @@
     ctx.restore();
   };
 
-  // Label chip (DOM) — one chip style for capabilities across all views.
+  // Label chip (DOM) - one chip style for capabilities across all views.
   V.chip = function (text, parent, extraClass) {
     return V.el("div", "lx-chip" + (extraClass ? " " + extraClass : ""), parent, text);
   };

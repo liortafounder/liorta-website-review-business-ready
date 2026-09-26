@@ -227,7 +227,7 @@
   font-size: var(--fs-sm);
 }
 
-/* capability band — the same seven capabilities as the visuals, as text */
+/* capability band - the same seven capabilities as the visuals, as text */
 .cap-band {
   list-style: none;
   margin: 0;
@@ -857,7 +857,7 @@
   gap: var(--space-md);
 }
 
-/* the connector thread — the mark's own connector language */
+/* the connector thread - the mark's own connector language */
 .offer-rail::before {
   content: "";
   position: absolute;

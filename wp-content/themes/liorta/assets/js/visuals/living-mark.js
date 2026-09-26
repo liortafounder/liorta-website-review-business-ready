@@ -1,5 +1,5 @@
 /*
- * LivingMark — the Liorta nine-dot identity, alive but never out of formation.
+ * LivingMark - the Liorta nine-dot identity, alive but never out of formation.
  * Mount: <div data-liorta-visual="living-mark"> (content from LIORTA_BRAND.identity).
  * A server-rendered .lm-list inside the mount is the no-JS / semantic fallback.
  */

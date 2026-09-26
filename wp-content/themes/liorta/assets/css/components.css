@@ -167,7 +167,7 @@
   margin-right: auto;
 }
 
-/* Real Liorta logo lockup (nine-dot mark + wordmark) — see
+/* Real Liorta logo lockup (nine-dot mark + wordmark) - see
    ASSET-LICENSES.md. Intrinsic ratio ~9.43:1; height-constrained so it
    scales cleanly at any header/footer size without distortion. */
 .site-logo__mark {
@@ -181,14 +181,14 @@
   }
 }
 
-/* The source file is brand-blue on transparent — recolor to white for the
+/* The source file is brand-blue on transparent - recolor to white for the
    dark footer via filter (does not modify the source asset/geometry). */
 .site-logo__mark--on-dark {
   filter: brightness(0) invert(1);
 }
 
 /* wp_nav_menu()'s items_wrap strips the <ul> but still wraps each item in
-   <li> — reset the resulting bare list-item markers/margins here since our
+   <li> - reset the resulting bare list-item markers/margins here since our
    global `ul,ol { list-style:none }` reset only targets the <ul>/<ol> tags. */
 .primary-nav li,
 .mobile-drawer__nav li {
@@ -864,7 +864,7 @@ a.card:hover,
   max-width: none;
 }
 
-/* Full navigation from 66rem (1056px — covers 1280px screens at 125–150%
+/* Full navigation from 66rem (1056px - covers 1280px screens at 125-150%
    scaling and small laptops); a compact variant is used up to 80rem. Below
    66rem the drawer is used. */
 @media (min-width: 64rem) and (max-width: 65.9375rem) {

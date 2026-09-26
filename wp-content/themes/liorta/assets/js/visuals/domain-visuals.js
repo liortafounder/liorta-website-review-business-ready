@@ -1,5 +1,5 @@
 /*
- * Domain visuals — one metaphor per subject, shared grammar (core.js).
+ * Domain visuals - one metaphor per subject, shared grammar (core.js).
  * Mount: <div data-liorta-visual="domain" data-mode="periodic|clinical|evidence|data|quality|ecosystem">
  * Labels come from LIORTA_BRAND.content.domains; no brand names are held here.
  * These illustrate the subject (regulatory convention, generic evidence and

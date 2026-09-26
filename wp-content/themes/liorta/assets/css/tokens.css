@@ -2,7 +2,7 @@
   Liorta Design Tokens
   Direction: warm white / light grey neutrals (~70%), charcoal dark sections (~20%),
   restrained blue-violet accent (~10%). Evolved Liorta light blue as primary.
-  Placeholder values pending {{FINAL_COLORS}} / {{FINAL_LOGO}} approval — see DECISIONS.md.
+  Placeholder values pending {{FINAL_COLORS}} / {{FINAL_LOGO}} approval - see DECISIONS.md.
 */
 
 :root {
@@ -32,7 +32,7 @@
   --color-primary-600: #2569ac;
   --color-primary-700: #1c5488;
 
-  /* ---- Color: accent (restrained blue-violet) — sparing use only ---- */
+  /* ---- Color: accent (restrained blue-violet) - sparing use only ---- */
   --color-accent-400: #8a7cf0;
   --color-accent-500: #6c5ce0;
   --color-accent-600: #5645c4;
@@ -128,7 +128,7 @@
 */
 :root {
   /* A more saturated, confident "Liorta blue" calibrated against the live
-     liorta.com brand color, plus a cyan companion for gradients/glow —
+     liorta.com brand color, plus a cyan companion for gradients/glow -
      used deliberately (gradients, glow, accents), not as a full repaint. */
   --v2-blue-400: #4f8ef7;
   --v2-blue-500: #2f6ff2;

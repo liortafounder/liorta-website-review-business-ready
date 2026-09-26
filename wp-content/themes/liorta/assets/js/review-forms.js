@@ -8,7 +8,7 @@
     if (statusEl) {
       statusEl.hidden = false;
       statusEl.className = "form-status form-status--success";
-      statusEl.textContent = "This is a static UI/UX review copy \u2014 form submissions are disabled here. The live local build has a fully working version of this form.";
+      statusEl.textContent = "This is a static UI/UX review copy - form submissions are disabled here. The live local build has a fully working version of this form.";
       statusEl.setAttribute("tabindex", "-1");
       statusEl.focus();
     }

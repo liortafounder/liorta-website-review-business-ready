@@ -1,9 +1,9 @@
 /*
- * Protected Intelligence Field — intelligence working on varied information
+ * Protected Intelligence Field - intelligence working on varied information
  * inside a layered, governed boundary. Relationships stay traceable through
  * the boundary to organized outcomes; a human-oversight presence sits on it.
  * Communicates principles only (protection, control, traceability,
- * governance, oversight) — never a mechanism or a processing order.
+ * governance, oversight) - never a mechanism or a processing order.
  * Mount: <div data-liorta-visual="protection" [data-mode="rich"]>
  */
 (function () {

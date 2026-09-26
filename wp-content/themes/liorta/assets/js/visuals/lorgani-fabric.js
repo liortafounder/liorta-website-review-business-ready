@@ -1,5 +1,5 @@
 /*
- * LorganiFabric — the "Fabric View": the platform as one flowing intelligence
+ * LorganiFabric - the "Fabric View": the platform as one flowing intelligence
  * surface; information lands on it and becomes related where it lands; each
  * application rises from its own region of the same fabric.
  * Mount: <div data-liorta-visual="fabric" [data-focus="<application key>"] [data-plate="0"]>

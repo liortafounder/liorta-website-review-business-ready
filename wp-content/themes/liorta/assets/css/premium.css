@@ -1,5 +1,5 @@
 /*
-  Premium v2 redesign layer — loaded sitewide.
+  Premium v2 redesign layer - loaded sitewide.
   Originally built for the homepage only (hero, platform diagram, product
   mockup, trust pipeline, asymmetric solution panels); now the shared
   component library reused by inner-page templates as the redesign is
@@ -1056,7 +1056,7 @@
   margin-top: var(--space-2xl);
 }
 
-/* Compact variant for narrow contexts (e.g. inside a .split half-column) —
+/* Compact variant for narrow contexts (e.g. inside a .split half-column) -
    drops the document-thumbnail illustration, keeps the dot+label sequence. */
 .hp-trust-track--compact {
   grid-template-columns: repeat(6, 1fr);
@@ -1351,7 +1351,7 @@
   box-shadow: 0 4px 14px -4px rgba(47, 111, 242, 0.5);
   transition: transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
   /* --proximity (0..1) is a pointer-driven "field" signal set by main.js as the
-     cursor moves across the whole grid — dots brighten as the cursor nears
+     cursor moves across the whole grid - dots brighten as the cursor nears
      them, reading as a connected network responding together rather than a
      single rigid tilt. Purely a JS-set custom property; default 0 keeps the
      dot inert with no JS/no-hover/reduced-motion. */
@@ -1454,7 +1454,7 @@
   initial-value: 0deg;
 }
 
-/* Item 6: Lorgani reads as a genuine central intelligent foundation — a
+/* Item 6: Lorgani reads as a genuine central intelligent foundation - a
    rotating gradient ring + pulsing core glow, not a plain rounded rectangle. */
 .lorgani-flow__hub {
   position: relative;
@@ -1694,9 +1694,9 @@
 .product-mini-chart span { flex: 1; border-radius: 2px 2px 0 0; background: var(--v2-gradient-primary); opacity: 0.85; }
 
 /* IDossi's mockup: a real dossier-authoring interface (chrome bar + TOC +
-   content pane), not an abstract numbered list — see brief item 4. TOC
+   content pane), not an abstract numbered list - see brief item 4. TOC
    labels are genuine standard DSUR section headings (external regulatory
-   convention, not Liorta IP — PUBLIC-CONTENT-IP-RULES.md §4). */
+   convention, not Liorta IP - PUBLIC-CONTENT-IP-RULES.md §4). */
 .product-mini-dossier {
   background: var(--color-surface);
   border-radius: var(--radius-md);

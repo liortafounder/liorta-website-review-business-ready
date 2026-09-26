@@ -1,5 +1,5 @@
 /*
- * LorganiOrbit — the "Orbit View": a layered intelligence sphere with the
+ * LorganiOrbit - the "Orbit View": a layered intelligence sphere with the
  * Liorta mark at its heart. Information travels the outer orbit and is drawn
  * inward; capabilities circle the middle orbit together (never a sequence);
  * the applications orbit closest, tethered to the core, releasing outputs.
@@ -63,7 +63,7 @@
         }
         b.type = "button";
         V.el("em", null, b, c.brand);
-        b.setAttribute("aria-label", c.label + " — " + c.brand + ". " + c.line);
+        b.setAttribute("aria-label", c.label + " - " + c.brand + ". " + c.line);
         b.addEventListener("mouseenter", function () {
           hoverCap = i;
         });
