@@ -1,0 +1,151 @@
+/*
+  The Liorta Intelligent Flow — signature visual system.
+  Fine luminous lines carry fragmented marks into structured, connected nodes.
+  Used in the hero, section dividers, and the platform/product-flow diagrams.
+  Never literal anatomy — see DECISIONS.md for the creative rationale.
+*/
+
+.flow-visual {
+  position: relative;
+  width: 100%;
+}
+
+.flow-visual svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.flow-line {
+  fill: none;
+  stroke: url(#liortaFlowGradient);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-dasharray: 6 10;
+  animation: liorta-flow-dash 14s linear infinite;
+}
+
+.flow-line--slow {
+  animation-duration: 22s;
+  stroke-width: 1;
+  opacity: 0.6;
+}
+
+.flow-node {
+  fill: var(--color-primary-400);
+}
+
+.flow-node--ghost {
+  fill: var(--color-neutral-300);
+  opacity: 0.7;
+}
+
+.flow-fragment {
+  fill: var(--color-neutral-300);
+  opacity: 0.55;
+}
+
+.flow-fragment--dark {
+  fill: rgba(244, 242, 239, 0.18);
+}
+
+@keyframes liorta-flow-dash {
+  to {
+    stroke-dashoffset: -320;
+  }
+}
+
+@keyframes liorta-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.18); opacity: 0.7; }
+}
+
+.flow-node--pulse {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: liorta-pulse 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-line,
+  .flow-node--pulse {
+    animation: none !important;
+  }
+}
+
+/* Section divider: a single flow-line motif used between homepage sections */
+.flow-divider {
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.flow-divider svg {
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+}
+
+/* Stage stepper (Configure -> Ingest -> ... ) used in Product Flow section */
+.flow-steps {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(2, 1fr);
+  counter-reset: flow-step;
+}
+
+@media (min-width: 48rem) {
+  .flow-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .flow-steps {
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  }
+}
+
+.flow-step {
+  counter-increment: flow-step;
+  position: relative;
+  padding-top: var(--space-lg);
+  text-align: left;
+}
+
+.flow-step::before {
+  content: counter(flow-step, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  color: var(--color-primary-500);
+  display: block;
+  margin-bottom: var(--space-2xs);
+}
+
+.flow-step::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.75rem;
+  height: 2px;
+  background: var(--color-primary-300);
+}
+
+.flow-step h4 {
+  font-size: var(--fs-sm);
+  margin-bottom: 0.2em;
+}
+
+.flow-step p {
+  font-size: var(--fs-xs);
+  color: var(--color-ink-soft);
+  margin: 0;
+}
+
+.section--dark .flow-step p {
+  color: var(--color-on-dark-soft);
+}
