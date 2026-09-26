@@ -864,9 +864,10 @@ a.card:hover,
   max-width: none;
 }
 
-/* Desktop navigation starts at 80rem: the full lockup plus the
-   configuration-driven menu needs the width; below it the drawer is used. */
-@media (min-width: 64rem) and (max-width: 79.9375rem) {
+/* Full navigation from 66rem (1056px — covers 1280px screens at 125–150%
+   scaling and small laptops); a compact variant is used up to 80rem. Below
+   66rem the drawer is used. */
+@media (min-width: 64rem) and (max-width: 65.9375rem) {
   .primary-nav {
     display: none;
   }
@@ -878,5 +879,50 @@ a.card:hover,
   }
   .product-login-link {
     display: none;
+  }
+}
+
+/* Desktop header spacing: the configuration-driven menu, the lockup and the
+   CTA must fit inside the page container at every desktop width (from 66rem),
+   so the menu uses tighter spacing, stepping down on narrower screens. The
+   logo keeps its proportions and is never squeezed. */
+@media (min-width: 66rem) {
+  .primary-nav {
+    gap: 0.95rem;
+  }
+  .primary-nav a {
+    font-size: 0.78rem;
+    letter-spacing: 0.01em;
+  }
+}
+
+@media (min-width: 66rem) and (max-width: 79.9375rem) {
+  .site-header__inner {
+    gap: var(--space-md);
+  }
+  .site-logo__mark {
+    height: 1.6rem;
+  }
+  .header-actions .btn--primary {
+    padding-inline: 1.1rem;
+    font-size: 0.875rem;
+  }
+  .product-login-link {
+    display: none;
+  }
+}
+
+@media (min-width: 66rem) and (max-width: 71.9375rem) {
+  .site-header__inner {
+    gap: var(--space-sm);
+  }
+  .site-logo__mark {
+    height: 1.4rem;
+  }
+  .primary-nav {
+    gap: 0.7rem;
+  }
+  .primary-nav a {
+    font-size: 0.75rem;
   }
 }
