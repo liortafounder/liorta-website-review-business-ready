@@ -2958,9 +2958,44 @@ h3.has-logo {
   margin-bottom: var(--space-md);
 }
 
+/* Homepage only: the full-colour Lorgani logo on a white card, so the brand
+   blues read clearly against the dark chapter background. */
 .hp-intro__logo {
-  margin: 0.35rem 0 var(--space-sm);
+  display: flex;
+  justify-content: center;
+  max-width: none;
+  margin: 0.5rem auto var(--space-md);
   line-height: 0;
+}
+
+.hp-intro__logo .brand-logo {
+  padding: 0.85rem 1.6rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.hp-intro__logo .brand-logo {
+  position: relative;
+}
+
+.hp-intro .hp-intro__logo .brand-logo .tm {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.6rem;
+  margin: 0;
+  color: var(--lx-ink);
+}
+
+/* Centred kicker: a matching rule on the right so the word itself is centred
+   (the trailing letter-spacing is offset too). */
+.hp-kicker--balanced::after {
+  content: "";
+  width: 1.25rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+  margin-left: -0.14em;
 }
 
 .brand-logo--intro img {
