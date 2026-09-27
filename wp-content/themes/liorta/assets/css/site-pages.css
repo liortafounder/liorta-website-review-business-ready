@@ -2907,3 +2907,100 @@ sup.tm {
     gap: 0;
   }
 }
+
+/* Platform and application logos (supplied artwork; see ASSET-LICENSES.md).
+   Height-led sizing, never distorted; the TM mark sits at the top right. */
+.brand-logo {
+  display: inline-flex;
+  align-items: flex-start;
+  max-width: 100%;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.brand-logo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 3rem;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.brand-logo .tm {
+  font-size: 0.8rem;
+  line-height: 1;
+  margin: 0.1rem 0 0 0.15rem;
+  color: currentColor;
+  opacity: 0.75;
+}
+
+h1.has-logo,
+h2.has-logo,
+h3.has-logo {
+  line-height: 0;
+}
+
+.brand-logo--hero img {
+  height: clamp(3.4rem, 3.2vw + 2.2rem, 5.25rem);
+}
+
+.pl-hero .brand-logo--hero img {
+  height: clamp(3rem, 3vw + 1.8rem, 4.5rem);
+}
+
+.pl-hero .brand-logo .tm,
+.hp-intro .brand-logo .tm {
+  color: #fff;
+}
+
+.app-hero h1.has-logo {
+  margin-bottom: var(--space-md);
+}
+
+.hp-intro__logo {
+  margin: 0.35rem 0 var(--space-sm);
+  line-height: 0;
+}
+
+.brand-logo--intro img {
+  height: clamp(2.6rem, 2vw + 1.8rem, 3.6rem);
+}
+
+.brand-logo--panel img {
+  height: clamp(3rem, 2vw + 2rem, 4rem);
+}
+
+.app-focus__purpose h2.has-logo {
+  margin: 0.2rem 0 var(--space-sm);
+}
+
+.brand-logo--card img {
+  height: 3.4rem;
+}
+
+.app-list h3.has-logo {
+  margin: 0.15rem 0 0.6rem;
+}
+
+.app-list h3.has-logo a {
+  display: inline-block;
+  border-radius: 0.4rem;
+}
+
+.app-list h3.has-logo a:focus-visible {
+  outline: 2px solid var(--lx-cyan);
+  outline-offset: 4px;
+}
+
+.app-list__meta {
+  min-height: 1.35rem;
+}
+
+.hp-kicker sup.tm {
+  font-size: 0.7em;
+  letter-spacing: 0;
+  vertical-align: 0.45em;
+  margin-left: -0.2em;
+  margin-right: 0.1em;
+}
