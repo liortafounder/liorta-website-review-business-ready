@@ -3039,3 +3039,61 @@ h3.has-logo {
   margin-left: -0.2em;
   margin-right: 0.1em;
 }
+
+/* Clickable brand logos (open the application in a new tab). */
+.brand-logo-link {
+  display: inline-flex;
+  max-width: 100%;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  line-height: 0;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.brand-logo-link:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.brand-logo-link:focus-visible {
+  outline: 2px solid var(--lx-cyan);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo-link {
+    transition: none;
+  }
+  .brand-logo-link:hover {
+    transform: none;
+  }
+}
+
+/* Long-form reading pages (blog articles, legal pages): calmer heading scale. */
+.single-resource article h1,
+.simple-content h1 {
+  font-size: clamp(2rem, 1.6vw + 1.4rem, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+.single-resource .entry-content h2,
+.single-resource article .prose h2,
+.simple-content h2 {
+  font-size: clamp(1.4rem, 0.8vw + 1.1rem, 1.8rem);
+  line-height: 1.2;
+  margin-top: var(--space-xl);
+}
+
+.single-resource article .prose h3,
+.single-resource .entry-content h3,
+.simple-content h3 {
+  font-size: clamp(1.15rem, 0.5vw + 1rem, 1.35rem);
+  line-height: 1.3;
+  margin-top: var(--space-lg);
+}
+
+.simple-content ol,
+.single-resource article .prose ol {
+  padding-left: 0;
+}
