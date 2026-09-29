@@ -3834,3 +3834,10 @@ h3.has-logo {
     transform: none;
   }
 }
+
+.why-cards__note {
+  margin: var(--space-md) 0 0;
+  max-width: 60rem;
+  font-size: var(--fs-2xs);
+  color: var(--lx-ink-soft);
+}
