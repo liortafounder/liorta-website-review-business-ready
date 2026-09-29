@@ -3616,3 +3616,221 @@ h3.has-logo {
   display: list-item;
   padding-left: 0.2rem;
 }
+
+/* Legal / long-document layout: numbered sections with an "On this page" list */
+.legal-hero {
+  padding-block: var(--space-xl) var(--space-lg);
+  background: var(--lx-dark-bg);
+  color: var(--lx-on-dark);
+}
+
+.legal-hero h1 {
+  margin: 0.2rem 0 0.4rem;
+  color: #fff;
+  font-size: clamp(2.1rem, 2vw + 1.4rem, 3rem);
+}
+
+.legal-hero .breadcrumbs,
+.legal-hero .breadcrumbs a {
+  color: var(--lx-on-dark-soft);
+}
+
+.legal-hero__meta {
+  margin: 0;
+  color: var(--lx-on-dark-soft);
+  font-size: var(--fs-sm);
+}
+
+.legal-doc-section {
+  padding-top: var(--space-xl);
+}
+
+.legal-layout {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 60rem) {
+  .legal-layout {
+    grid-template-columns: 17rem minmax(0, 1fr);
+  }
+  .legal-toc {
+    position: sticky;
+    top: calc(var(--header-height, 5rem) + 1.5rem);
+    max-height: calc(100vh - var(--header-height, 5rem) - 3rem);
+    overflow-y: auto;
+  }
+}
+
+.legal-toc {
+  padding: var(--space-md) var(--space-md) var(--space-sm);
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid var(--lx-line);
+}
+
+.legal-toc__title {
+  margin: 0 0 0.6rem;
+  font-size: var(--fs-2xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lx-blue);
+}
+
+.legal-toc ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legal-toc li {
+  margin: 0;
+}
+
+.legal-toc a {
+  display: flex;
+  gap: 0.45rem;
+  padding: 0.38rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: var(--fs-sm);
+  line-height: 1.35;
+  color: var(--lx-ink-soft);
+  text-decoration: none;
+}
+
+.legal-toc a:hover,
+.legal-toc a:focus-visible {
+  background: #eef6fa;
+  color: var(--lx-ink);
+}
+
+.legal-toc__num {
+  flex: none;
+  min-width: 1.4rem;
+  font-weight: 700;
+  color: var(--lx-blue);
+}
+
+.legal-doc {
+  max-width: 48rem;
+}
+
+.legal-doc > p:first-child {
+  font-size: 1.08rem;
+}
+
+.legal-doc h2.legal-h2 {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--lx-line);
+  scroll-margin-top: calc(var(--header-height, 5rem) + 1.25rem);
+  font-size: clamp(1.3rem, 0.7vw + 1.05rem, 1.6rem);
+}
+
+.legal-doc h2.legal-h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.legal-num {
+  color: var(--lx-blue);
+  margin-right: 0.2rem;
+}
+
+.legal-doc ul {
+  padding-left: 1.2rem;
+}
+
+.legal-doc ul li {
+  list-style: disc;
+  margin-bottom: 0.35rem;
+}
+
+.legal-doc__top {
+  margin-top: var(--space-xl);
+  font-size: var(--fs-sm);
+}
+
+.legal-doc__top a {
+  color: var(--lx-blue);
+}
+
+/* "Why Lorgani" / "Why Liorta" principle cards */
+.why-cards {
+  background: linear-gradient(180deg, #f9f8f6 0%, #eef6fa 100%);
+}
+
+.why-cards__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 40rem) {
+  .why-cards__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .why-cards__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.why-card {
+  padding: var(--space-lg);
+  border-radius: 1.25rem;
+  background: #fff;
+  border: 1px solid var(--lx-line);
+  box-shadow: 0 20px 40px -34px rgba(5, 26, 43, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 26px 48px -32px rgba(8, 152, 208, 0.45);
+}
+
+.why-card__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  margin-bottom: var(--space-sm);
+  border-radius: 0.8rem;
+  background: linear-gradient(135deg, rgba(8, 152, 208, 0.12), rgba(0, 186, 206, 0.16));
+  color: var(--lx-blue);
+}
+
+.why-card__icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.why-card h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.15rem;
+  color: var(--lx-ink);
+}
+
+.why-card p {
+  margin: 0;
+  color: var(--lx-ink-soft);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .why-card {
+    transition: none;
+  }
+  .why-card:hover {
+    transform: none;
+  }
+}
