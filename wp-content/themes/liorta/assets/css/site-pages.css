@@ -3097,3 +3097,214 @@ h3.has-logo {
 .single-resource article .prose ol {
   padding-left: 0;
 }
+
+/* Platform page: proof points, comparison and FAQ */
+.pl-proof {
+  list-style: none;
+  margin: var(--space-lg) 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.6rem;
+}
+
+.pl-proof li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 186, 206, 0.35);
+  background: rgba(0, 186, 206, 0.08);
+  color: var(--lx-on-dark);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.pl-proof__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--lx-cyan);
+  box-shadow: 0 0 10px rgba(0, 186, 206, 0.8);
+}
+
+.compare {
+  overflow-x: auto;
+  border-radius: 1.25rem;
+  border: 1px solid var(--lx-line);
+  background: #fff;
+}
+
+.compare:focus-visible {
+  outline: 2px solid var(--lx-cyan);
+  outline-offset: 3px;
+}
+
+.compare__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+
+.compare__table th,
+.compare__table td {
+  padding: 1rem 1.1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--lx-line);
+  color: var(--lx-ink-soft);
+}
+
+.compare__table thead th {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--lx-ink);
+  background: #f5f9fb;
+}
+
+.compare__table tbody th {
+  width: 15%;
+  font-weight: 700;
+  color: var(--lx-ink);
+}
+
+.compare__table tbody tr:last-child th,
+.compare__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.compare__table .compare__ours {
+  background: linear-gradient(180deg, rgba(8, 152, 208, 0.07), rgba(0, 186, 206, 0.05));
+  color: var(--lx-ink);
+  font-weight: 600;
+  width: 33%;
+}
+
+.compare__table thead .compare__ours {
+  background: var(--lx-dark-bg);
+  color: #fff;
+}
+
+@media (max-width: 47.9375rem) {
+  .compare {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+  }
+  .compare__table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .compare__table,
+  .compare__table tbody,
+  .compare__table tr,
+  .compare__table th,
+  .compare__table td {
+    display: block;
+    width: 100%;
+  }
+  .compare__table tr {
+    margin-bottom: var(--space-md);
+    border: 1px solid var(--lx-line);
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #fff;
+  }
+  .compare__table tbody th {
+    width: 100%;
+    background: #f5f9fb;
+  }
+  .compare__table td {
+    border-bottom: 1px solid var(--lx-line);
+  }
+  .compare__table td::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: var(--fs-2xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--lx-blue);
+  }
+  .compare__table .compare__ours {
+    width: 100%;
+  }
+}
+
+.faq-wrap {
+  max-width: 56rem;
+}
+
+.faq {
+  border-top: 1px solid var(--lx-line);
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--lx-line);
+}
+
+.faq__item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: 1.1rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq__item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq__item summary h3 {
+  margin: 0;
+  font-size: clamp(1.05rem, 0.4vw + 0.95rem, 1.2rem);
+  color: var(--lx-ink);
+}
+
+.faq__item summary::after {
+  content: "+";
+  flex: none;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--lx-line);
+  color: var(--lx-blue);
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.faq__item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq__item summary:focus-visible {
+  outline: 2px solid var(--lx-cyan);
+  outline-offset: 4px;
+}
+
+.faq__item p {
+  margin: 0 0 1.2rem;
+  max-width: 48rem;
+  color: var(--lx-ink-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq__item summary::after {
+    transition: none;
+  }
+}
+
+/* Proof strip sits on its own full-width row under the hero columns. */
+.pl-hero__head > .pl-proof {
+  grid-column: 1 / -1;
+  grid-row: 6;
+}
