@@ -3308,3 +3308,142 @@ h3.has-logo {
   grid-column: 1 / -1;
   grid-row: 6;
 }
+
+/* Homepage intro: compact "general-purpose AI vs platform" contrast (dark chapter) */
+.ai-contrast {
+  max-width: 60rem;
+  margin: var(--space-xl) auto 0;
+  padding: var(--space-lg);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(0, 186, 206, 0.22);
+  background: rgba(3, 17, 29, 0.55);
+}
+
+.ai-contrast__head {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.ai-contrast__head h3 {
+  margin: 0 0 0.4rem;
+  color: #fff;
+  font-size: clamp(1.3rem, 1vw + 1rem, 1.75rem);
+}
+
+.ai-contrast__head p {
+  margin: 0 auto;
+  max-width: 40rem;
+  color: var(--lx-on-dark-soft);
+}
+
+.ai-contrast__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: var(--fs-sm);
+}
+
+.ai-contrast__table th,
+.ai-contrast__table td {
+  width: 50%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(169, 196, 209, 0.16);
+  color: var(--lx-on-dark-soft);
+}
+
+.ai-contrast__table thead th {
+  font-size: var(--fs-2xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lx-on-dark-soft);
+}
+
+.ai-contrast__table .ai-contrast__ours {
+  color: #fff;
+  font-weight: 600;
+  background: rgba(0, 186, 206, 0.08);
+}
+
+.ai-contrast__table thead .ai-contrast__ours {
+  color: var(--lx-cyan);
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+
+.ai-contrast__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.ai-contrast__table tbody tr:last-child .ai-contrast__ours {
+  border-radius: 0 0 0.6rem 0.6rem;
+}
+
+.ai-contrast__more {
+  display: block;
+  margin-top: var(--space-md);
+  text-align: center;
+  color: var(--lx-cyan);
+  font-weight: 600;
+}
+
+@media (max-width: 39.9375rem) {
+  .ai-contrast {
+    padding: var(--space-md);
+  }
+  .ai-contrast__table th,
+  .ai-contrast__table td {
+    padding: 0.6rem 0.55rem;
+  }
+}
+
+/* Application page: why a general-purpose assistant is not enough */
+.not-generic {
+  margin-top: var(--space-lg);
+}
+
+.not-generic__title {
+  margin: 0 0 var(--space-md);
+  font-size: clamp(1.15rem, 0.6vw + 1rem, 1.4rem);
+}
+
+.not-generic__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-md);
+}
+
+@media (min-width: 56rem) {
+  .not-generic__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.not-generic__list li {
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 1rem;
+  background: #fff;
+  border: 1px solid var(--lx-line);
+  border-top: 3px solid var(--lx-cyan);
+}
+
+.not-generic__list b {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--lx-ink);
+}
+
+.not-generic__list span {
+  color: var(--lx-ink-soft);
+  font-size: var(--fs-sm);
+}
+
+/* Intro buttons: centred across the full width (paragraph width limits must not apply). */
+.hp-intro .hp-intro__cta {
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
